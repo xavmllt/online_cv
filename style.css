@@ -76,6 +76,7 @@
 }
 
 .conteneur__portofolio{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,18 +90,22 @@
     object-fit: cover; /* Pour ajuster l'image au conteneur tout en conservant son rapport hauteur/largeur */
 }
 
+.folio-container img:hover{
+    width: 1000px;
+    height: 600px;
+    transition: 1s;
+}
+
 
 
 /* FORMULAIRE PART */
 .title__form{
     padding-left: 20px;
-    /* background-color: lightgray; */
-    background: linear-gradient(#8d8169, #96b3b3);
-    color: rgba(255, 255, 255, 0.6);
+    background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
     font-size: 60px;
     font-style: italic;
-    height: 100px;
-    margin-top: 20px;
+    height: 80px;
+    margin-top: 30px;
     padding-top: 20px;
 }
 .title__form:hover{
@@ -110,7 +115,7 @@
 .section__form{
     display: flex;
     justify-content: center;
-    background: linear-gradient(#96b3b3, #8d8169);
+    background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
 }
 
 form{
@@ -162,6 +167,9 @@ input[type='submit']:hover{
 
 .form__textarea{
     margin-right: 20px;
+}
+textarea{
+    padding: 3px;
 }
 
 

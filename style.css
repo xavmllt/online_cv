@@ -1,0 +1,278 @@
+/* ALL */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* HEADER NAV */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+
+/* TITLE MAIN CONTENT */
+.name{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+.main__conteneur{
+    display: flex;
+    justify-content: space-around;
+    height: 700px;
+    align-items: center;
+    background: linear-gradient(
+        #8a2387, #E94057, #F27121);
+}
+.main__photo{
+    background-color: red;
+    width: 365px;
+    height: 365px;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    background: url(images/ppega.jpeg); /* INSERT YOUR PHOTO HERE */
+    background-position: center;
+}
+
+.main__description{
+    width: 600px;
+    height: 550px;
+}
+
+.main__description p{
+    font-size: 90px;
+    font-family: 'Antic Didone', serif;
+    font-family: 'Jura', sans-serif;
+}
+
+
+
+/* PORTOFOLIO PART */
+.title__portofolio{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Antic Didone', serif;
+    font-family: 'Lobster', sans-serif;
+    font-weight: normal;
+}
+
+.conteneur__portofolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.folio-container img{
+    width: 900px;
+    height: 500px;
+    object-fit: cover; /* Pour ajuster l'image au conteneur tout en conservant son rapport hauteur/largeur */
+}
+
+
+
+/* FORMULAIRE PART */
+.title__form{
+    padding-left: 20px;
+    /* background-color: lightgray; */
+    background: linear-gradient(#8d8169, #96b3b3);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 60px;
+    font-style: italic;
+    height: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.title__form:hover{
+    color: #ffff;
+}
+
+.section__form{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#96b3b3, #8d8169);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, darkblue, darkorchid) border-box;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    align-items: center;
+    width: 600px;
+    margin-bottom: 80px;
+}
+
+.form__title{
+    font-family: 'Antic Didone', serif;
+    font-family: 'Lobster', sans-serif;
+    font-weight: normal;
+}
+
+.form__input{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 10px;
+}
+
+label{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input[type='submit']{
+    width: 110px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, darkblue, darkorchid) border-box;
+    margin-top: 10px;
+    border: 4px solid transparent;
+}
+
+input[type='submit']:hover{
+    background-color: red;
+}
+
+.form__textarea{
+    margin-right: 20px;
+}
+
+
+/* FOOTER */
+footer{
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    /* background: #02011e; */
+    background: #32313f;
+    /* color: #4b4a4a; */
+    color: #605e5e;
+}
+
+footer img{
+    width: 20px;
+}
+
+.contenu-footer{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+}
+
+.bloc{
+    width: 25%;
+    margin: 0 30px;
+}
+
+
+/* contact */
+.footer-contact h3, .footer-services h3, .footer-horaire h3, .footer-medias h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-contact p{
+    padding: 5px;
+}
+
+
+/* services */
+.liste-services, .liste-horaires, .liste-medias{
+    list-style-type: none;
+}
+
+.liste-services li{
+    padding: 2px 0;
+}
+
+.liste-services a{
+    text-decoration: none;
+    color: #333;
+}
+
+.liste-services:hover{
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+}
+
+/* medias */
+.liste-medias{
+    position: relative;
+    right: 10px;
+}
+
+.liste-medias img{
+    width: 20px;
+    margin: 10px 10px;
+}
+
+.liste-medias a{
+    text-decoration: none;
+    color: #605e5e;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* medias queries */
+@media screen and (max-width:1300px){
+    .contenu-footer{
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    .bloc{
+        width: 40%;
+        margin: 0 0;
+    }
+    .bloc:nth-child(1), .bloc:nth-child(2){ /* permet de séléctionner des enfants dans une liste */
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contenu-footer{
+        width: 320px;
+    }
+    .bloc{
+        width: 300px;
+        margin: 30px;
+    }
+    .bloc:nth-child(1), .bloc:nth-child(2){
+        margin-bottom: 30px;
+    }
+    .bloc:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+

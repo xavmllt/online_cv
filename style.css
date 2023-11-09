@@ -223,8 +223,12 @@ input[type='submit']{
 .form__textarea{
     margin-right: 20px;
 }
+
 textarea{
     padding: 3px;
+    border: 3px solid rgb(49, 48, 48);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 
@@ -259,6 +263,7 @@ footer img{
 .footer-contact h3, .footer-services h3, .footer-horaire h3, .footer-medias h3{
     font-size: 20px;
     padding-bottom: 20px;
+    padding-left: 30px;
 }
 
 .footer-contact p{
@@ -301,7 +306,14 @@ footer img{
     font-size: 25px;
 }
 
-
+#marque{
+    background-color: white;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    height: 50px;
+    padding-top: 10px;
+}
 
 /* medias queries */
 @media screen and (max-width:1300px){

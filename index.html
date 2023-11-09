@@ -18,104 +18,113 @@
     <title>Online CV</title>
 </head>
 <body>
+
+    <!-- HEADER LOGO + NAV-->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-            <img src="images/ppega.jpeg" alt="Logo">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#portofolio__ancre">Portofolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#contact__ancre">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                    </a>
+                <img src="images/ppega.jpeg" alt="Logo">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#portofolio__ancre">Portofolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contact__ancre">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Download
+                        </a>
                     <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="images/cv.pdf" target="_blank">Curriculum Vitae</a></li>
+                        <!-- ADD MORE DOWNLOAD / VUES FOR THE VISITOR -->
                     </ul>
-                </li>
-                </ul>
-            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <div class="main--color">
-    <h1 class="name">XAVIER MAILLOT</h1>
-    <hr>
-    <div class="main__conteneur">
-        <div class="main__photo">
-        </div>
-        <div class="main__description">
-            <p>WEB</p>
-            <p>DEVELOPER</p>
-            <p>&</p>
-            <p>MOBILE</p>
-            <p>WEB</p>
-        </div>
-    </div>
-    </div>
-    <div class="portofolio--color">
-        <div class="boules__decoration">
-            <div class="boule">I</div>
-            <div class="boule boule__size">&#x2764;</div>
-            <div class="boule">L</div>
-            <div class="boule">U</div>
-            <div class="boule">V</div>
-            <div class="boule boule__size">&#x2764;</div>
-            <div class="boule">U</div>
-        </div>
-   
+
+    
     <main>
-        <h1 id="portofolio__ancre" class="title__portofolio">PORTOFOLIO</h1>
-            <section>
-                <div class="conteneur__portofolio">
-                    <div class="folio-container">
+        <!-- FIRST SECTION 'PRESENTATION'-->
+        <section>
+            <div class="section__presentation section__presentation--color">
+                <h1 class="name">XAVIER MAILLOT</h1>
+                <hr>
+                <div class="presentation__container">
+                    <div class="presentation__photo">
+                    </div>
+                    <div class="presentation__description">
+                        <p>WEB</p>
+                        <p>DEVELOPER</p>
+                        <p>&</p>
+                        <p>MOBILE</p>
+                        <p>WEB</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECOND SECTION 'PORTOFOLIO' -->
+        <section>
+            <!-- BOULES ANIMATION ILY -->
+            <div class="portofolio--color">
+                <div class="boules__decoration">
+                    <div class="boule">I</div>
+                    <div class="boule boule__size">&#x2764;</div>
+                    <div class="boule">L</div>
+                    <div class="boule">U</div>
+                    <div class="boule">V</div>
+                    <div class="boule boule__size">&#x2764;</div>
+                    <div class="boule">U</div>
+                </div>
+                <!-- PORTOFOLIO -->
+                <h1 id="portofolio__ancre" class="portofolio__title">PORTOFOLIO</h1>
+                <div class="portofolio__container">
+                    <div class="portofolio">
                         <a href="https://github.com/xavmllt/astronomy_project" target="_blank"><img src="images/astronomy.png" alt="Page d'accueil ASTRONOMY"></a>
                     </div>
-                    <div class="folio-container">
+                    <div class="portofolio">
                         <a href="https://github.com/xavmllt/astronomy_project" target="_blank"><img src="images/orangenebula.png" alt="Orange NEBULA"></a>
                     </div>
-                    <div class="folio-container">
+                    <div class="portofolio">
                         <img src="images/imc.png" alt="IMC project">
                     </div>
                 </div>
-    </div>
-            </section>
-        </div>
+            </div>
+
+        <!-- THIRD SECTION 'FORM' -->
+        <section>
+            <h2 id="contact__ancre" class="section__form--title">CONTACT ME</h2>
+            <div class="section__form">
+                <form action="" method="post">
+                    <div class="form__input">
+                        <h3 class="form__title">HERE &#x21E3;</h3>
+                        <label for="nom">Last Name :</label>
+                        <input type="text" name="nom" id="nom" required>
+                        <label for="prenom">First Name :</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                        <label for="email">E-Mail :</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="tel">Phone :</label>
+                        <input type="tel" name="tel" id="tel" required>
+                        <input type="submit" value="Send">
+                    </div>
+                    <div class="form__textarea">
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="any message.."></textarea>
+                    </div>  
+                </form>
+            </div>
+        </section>
     </main>
 
-    <h2 id="contact__ancre" class="title__form">CONTACT ME</h2>
-    <section class="section__form">
-        <form action="" method="post">
-            <div class="form__input">
-            <h3 class="form__title">HERE &#x21E3;</h3>
-            <label for="nom">Last Name :</label>
-            <input type="text" name="nom" id="nom" required autofocus>
-            <label for="prenom">First Name :</label>
-            <input type="text" name="prenom" id="prenom" required>
-            <label for="email">E-Mail :</label>
-            <input type="email" name="email" id="email" required>
-            <label for="tel">Phone :</label>
-            <input type="tel" name="tel" id="tel" required>
-            <input type="submit" value="Send">
-            </div>
-            <div class="form__textarea">
-                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="any message.."></textarea>
-            </div>  
-        </form>
-    </section>
-
-
+    <!-- FOOTER PART -->
     <footer>
         <div class="contenu-footer">
             <div class="bloc footer-services">

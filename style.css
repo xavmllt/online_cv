@@ -1,4 +1,3 @@
-/* ALL */
 *{
     margin: 0;
     padding: 0;
@@ -6,16 +5,21 @@
 
 
 
-/* HEADER NAV */
-
+/* HEADER NAV LOGO */
 .container-fluid img{
     width: 30px;
     height: 30px;
     margin: 10px;
 }
 
+.container-fluid ul li a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
 /* TITLE MAIN CONTENT */
-.main--color{
+.section__presentation--color{
     background-image: linear-gradient(to bottom, #c1d9e1, #81b8d7, #4c93d0, #366bc3, #4a3ca8);
 }
 
@@ -27,72 +31,65 @@
     font-family: 'Lato', sans-serif;
 }
 
-@keyframes defilementTexte {
-    from {
-      transform: translateX(-100%); /* Début à gauche de l'écran */
-    }
-    to {
-      transform: translateX(100%); /* Fin à droite de l'écran */
-    }
-}
-.main--color hr{
+.section__presentation hr{
     margin: 20px auto;
     width: 30%;
     color: rgb(11, 13, 68);
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    overflow: hidden; /* Masque le texte qui dépasse */
     animation: defilementTexte 5s linear infinite; /* 10s pour ajuster la vitesse, linear pour un mouvement uniforme, infinite pour une répétition infinie */
 }
+@keyframes defilementTexte{
+    from{
+      transform: translateX(-100%); /* Début à gauche de l'écran */
+    }
+    to{
+      transform: translateX(100%); /* Fin à droite de l'écran */
+    }
+}
 
-.main__conteneur{
+.presentation__container{
     display: flex;
     justify-content: space-around;
     height: 800px;
     align-items: center;
 }
-.main__photo{
+
+.presentation__photo{
     width: 365px;
     height: 365px;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    background: url(images/ppega.jpeg); /* INSERT YOUR PHOTO HERE */
+    background: url(images/ppega.jpeg);
     background-position: center;
 }
 
-.main__description{
+.presentation__description{
     width: 600px;
     height: 700px;
-    opacity: 0;
-    animation: apparitionTexte 3s ease-in-out forwards;
-}
-@keyframes apparitionTexte {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-.main__description p{
     font-size: 80px;
     font-family: 'Antic Didone', serif;
     font-family: 'Jura', sans-serif;
+    text-shadow: 4px 6px 6px rgba(1, 0, 0, 0.65);
+    opacity: 0;
+    animation: apparitionTexte 3s ease-in-out forwards;
 }
-  
+@keyframes apparitionTexte{
+    from{
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+
+
 /* BOULES */
 .boules__decoration{
     display: flex;
     justify-content: space-around;
 }
-@keyframes sautBoule {
-    0%, 100% {
-      transform: translateY(0); /* Position de départ et d'arrivée, aucune translation verticale */
-    }
-    50% {
-      transform: translateY(-20px); /* Au milieu de l'animation, la boule est déplacée vers le haut */
-    }
-  }
+
 .boule{
     height: 50px;
     width: 50px;
@@ -105,27 +102,38 @@
     color: #e16f6f;
     font-weight: 500;
 }
+@keyframes sautBoule{
+    0%, 100%{
+      transform: translateY(0); /* Position de départ et d'arrivée, aucune translation verticale */
+    }
+    50%{
+      transform: translateY(-20px); /* Au milieu de l'animation, la boule est déplacée vers le haut */
+    }
+}
+
 .boule__size{
     font-size: 45px;
 }
+
 .boule:hover{
     background-color: #642929;
 }
+
+
 
 /* PORTOFOLIO PART */
 .portofolio--color{
     background-image: linear-gradient(to top, #c1d9e1, #81b8d7, #4c93d0, #366bc3, #4a3ca8);
 }
-.title__portofolio{
+.portofolio__title{
     padding-top: 70px;
     text-align: center;
     font-size: 100px;
     font-family: 'Antic Didone', serif;
     font-family: 'Lobster', sans-serif;
-    font-weight: normal;
 }
 
-.conteneur__portofolio{
+.portofolio__container{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -135,13 +143,13 @@
     padding-bottom: 50px;
 }
 
-.folio-container img{
+.portofolio img{
     width: 900px;
     height: 500px;
     object-fit: cover; /* Pour ajuster l'image au conteneur tout en conservant son rapport hauteur/largeur */
 }
 
-.folio-container img:hover{
+.portofolio img:hover{
     width: 1000px;
     height: 600px;
     transition: 1s;
@@ -150,7 +158,7 @@
 
 
 /* FORMULAIRE PART */
-.title__form{
+.section__form--title{
     padding-left: 20px;
     font-size: 60px;
     font-style: italic;
@@ -158,7 +166,7 @@
     margin-top: 30px;
     padding-top: 20px;
 }
-.title__form:hover{
+.section__form--title:hover{
     color: #ffff;
 }
 
@@ -181,12 +189,6 @@ form{
     margin-bottom: 80px;
 }
 
-.form__title{
-    font-family: 'Antic Didone', serif;
-    font-family: 'Lobster', sans-serif;
-    font-weight: normal;
-}
-
 .form__input{
     margin-top: 15px;
     display: flex;
@@ -198,9 +200,16 @@ form{
     padding: 10px;
 }
 
+.form__title{
+    font-family: 'Antic Didone', serif;
+    font-family: 'Lobster', sans-serif;
+    font-weight: normal;
+}
+
 label{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 input[type='submit']{
     width: 110px;
     height: 60px;
@@ -211,10 +220,6 @@ input[type='submit']{
     border: 4px solid transparent;
 }
 
-input[type='submit']:hover{
-    background-color: red;
-}
-
 .form__textarea{
     margin-right: 20px;
 }
@@ -223,18 +228,13 @@ textarea{
 }
 
 
+
 /* FOOTER */
 footer{
     flex-shrink: 0;
     border-top: 1px dashed #000;
-    /* background: #02011e; */
     background: #32313f;
-    /* color: #4b4a4a; */
     color: #605e5e;
-}
-
-footer img{
-    width: 20px;
 }
 
 .contenu-footer{
@@ -252,7 +252,9 @@ footer img{
     margin: 0 30px;
 }
 
-
+footer img{
+    width: 20px;
+}
 /* contact */
 .footer-contact h3, .footer-services h3, .footer-horaire h3, .footer-medias h3{
     font-size: 20px;
@@ -262,8 +264,6 @@ footer img{
 .footer-contact p{
     padding: 5px;
 }
-
-
 /* services */
 .liste-services, .liste-horaires, .liste-medias{
     list-style-type: none;
@@ -282,7 +282,6 @@ footer img{
     text-decoration: none;
     color: rgb(3, 3, 3);
 }
-
 /* medias */
 .liste-medias{
     position: relative;
@@ -301,6 +300,8 @@ footer img{
     align-items: center;
     font-size: 25px;
 }
+
+
 
 /* medias queries */
 @media screen and (max-width:1300px){

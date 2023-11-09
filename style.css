@@ -7,45 +7,33 @@
 
 
 /* HEADER NAV */
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.header img{
+.container-fluid img{
     width: 30px;
     height: 30px;
     margin: 10px;
 }
 
-.nav ul{
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    font-size: 20px;
-    margin-right: 10px;
+/* TITLE MAIN CONTENT */
+.main--color{
+    background-image: linear-gradient(to bottom, #c1d9e1, #81b8d7, #4c93d0, #366bc3, #4a3ca8);
 }
 
-
-
-/* TITLE MAIN CONTENT */
 .name{
-    margin-top: 50px;
     text-align: center;
     font-size: 50px;
+    padding-top: 30px;
+    font-family: 'Antic Didone', serif;
+    font-family: 'Lato', sans-serif;
 }
+
 .main__conteneur{
     display: flex;
     justify-content: space-around;
-    height: 700px;
+    height: 800px;
     align-items: center;
-    background: linear-gradient(
-        #8a2387, #E94057, #F27121);
 }
 .main__photo{
-    background-color: red;
     width: 365px;
     height: 365px;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
@@ -55,15 +43,26 @@
 
 .main__description{
     width: 600px;
-    height: 550px;
+    height: 700px;
+    opacity: 0;
+    animation: apparitionTexte 3s ease-in-out forwards;
 }
-
+@keyframes apparitionTexte {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 .main__description p{
-    font-size: 90px;
+    font-size: 80px;
     font-family: 'Antic Didone', serif;
     font-family: 'Jura', sans-serif;
 }
-
+  
 
 
 /* PORTOFOLIO PART */
@@ -101,7 +100,6 @@
 /* FORMULAIRE PART */
 .title__form{
     padding-left: 20px;
-    background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
     font-size: 60px;
     font-style: italic;
     height: 80px;
@@ -115,7 +113,7 @@
 .section__form{
     display: flex;
     justify-content: center;
-    background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
+    margin-top: 50px;
 }
 
 form{

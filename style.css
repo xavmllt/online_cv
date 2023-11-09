@@ -21,10 +21,27 @@
 
 .name{
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     padding-top: 30px;
     font-family: 'Antic Didone', serif;
     font-family: 'Lato', sans-serif;
+}
+
+@keyframes defilementTexte {
+    from {
+      transform: translateX(-100%); /* Début à gauche de l'écran */
+    }
+    to {
+      transform: translateX(100%); /* Fin à droite de l'écran */
+    }
+}
+.main--color hr{
+    margin: 20px auto;
+    width: 30%;
+    color: rgb(11, 13, 68);
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Masque le texte qui dépasse */
+    animation: defilementTexte 5s linear infinite; /* 10s pour ajuster la vitesse, linear pour un mouvement uniforme, infinite pour une répétition infinie */
 }
 
 .main__conteneur{
@@ -63,10 +80,44 @@
     font-family: 'Jura', sans-serif;
 }
   
-
+/* BOULES */
+.boules__decoration{
+    display: flex;
+    justify-content: space-around;
+}
+@keyframes sautBoule {
+    0%, 100% {
+      transform: translateY(0); /* Position de départ et d'arrivée, aucune translation verticale */
+    }
+    50% {
+      transform: translateY(-20px); /* Au milieu de l'animation, la boule est déplacée vers le haut */
+    }
+  }
+.boule{
+    height: 50px;
+    width: 50px;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    background-color: #d9d9d9;
+    animation: sautBoule 1s ease-in-out infinite; /* 1s pour ajuster la durée, ease-in-out pour un mouvement fluide, infinite pour une répétition infinie */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e16f6f;
+    font-weight: 500;
+}
+.boule__size{
+    font-size: 45px;
+}
+.boule:hover{
+    background-color: #642929;
+}
 
 /* PORTOFOLIO PART */
+.portofolio--color{
+    background-image: linear-gradient(to top, #c1d9e1, #81b8d7, #4c93d0, #366bc3, #4a3ca8);
+}
 .title__portofolio{
+    padding-top: 70px;
     text-align: center;
     font-size: 100px;
     font-family: 'Antic Didone', serif;
@@ -81,6 +132,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    padding-bottom: 50px;
 }
 
 .folio-container img{

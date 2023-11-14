@@ -57,8 +57,8 @@
     width: 365px;
     height: 365px;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    background: url(images/ppega.jpeg);
-    background-position: center;
+    background: url(images/xavier.JPG);
+    background-position: 45% 18%;
 }
 
 .presentation__description{
@@ -372,17 +372,27 @@ footer img{
     .presentation__photo{
         display: none;
     }
-    .portofolio img{
+    .presentation__description{
         max-width: 100%;
+        margin-left: 100px;
+    }
+    .boules__decoration{
+        zoom: 0.7;
+    }
+    .portofolio__title{
+        font-size: 50px;
+    }
+    .portofolio img{
         height: auto;
+        zoom: 0.5;
     }
     .portofolio img:hover{
         width: auto; 
         height: auto; 
         transition: none;
     }
-    .form__input, .form__textarea{
-        width: 100%;
+    .section__form{
+        zoom: 0.8;
     }
     
 }

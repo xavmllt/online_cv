@@ -16,8 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lato:wght@100&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <!-- <script src="regex.js" defer></script> -->
-    <title>Online CV</title>
+    <script src="regex.js" defer></script>
+    <title>THE X</title>
 </head>
 <body>
 
@@ -39,11 +39,10 @@
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Download
+                        Downloads
                         </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="images/cv.pdf" target="_blank">Curriculum Vitae</a></li>
-                        <!-- ADD MORE DOWNLOAD / VUES FOR THE VISITOR -->
+                        <li><a class="dropdown-item" href="images/onlinecv.pdf" target="_blank">Curriculum Vitae</a></li>
                     </ul>
                         </li>
                     </ul>
@@ -104,7 +103,7 @@
         <section>
             <h2 id="contact__ancre" class="section__form--title">CONTACT ME</h2>
             <div class="section__form">
-                <form action="connexionbdd.php" method="post" id="form">
+                <form action="" method="post" id="form">
                     <div class="form__input">
                         <h3 class="form__title">HERE &#x21E3;</h3>
                         <label for="nom">Last Name :</label>
@@ -139,19 +138,21 @@
             </div>
             <div class="bloc footer-contact">
                 <h3>Keep in touch !</h3>
-                <a href="mailto:xaviermaillot100@gmail.com">xaviermaillot100@gmail.com</a>
                 <p>FRANCE</p>
             </div>
             <div class="bloc footer-medias">
                 <h3>Social medias</h3>
                 <ul class="liste-medias">
-                    <li><a href="#"><img src="instagram_2111463.png" alt="instagram">&ensp; Instagram</a></li>
                     <li><a href="https://github.com/xavmllt" target="_blank"><img src="images/GitHub-Mark.png" alt="Github">&ensp; Github</a></li>
                     <li><a href="https://www.linkedin.com/in/jean-françois-xavier-maillot-485906294/" target="_blank"><img src="images/logo-linkedin-noir-et-blanc.webp" alt="Linkedin">&ensp; Linkedin</a></li>
                 </ul>
             </div>
         </div>
-        <div id="marque">&copy;THE X TOUT DROIT RÉSERVÉS</div>
+        <div id="marque">&copy;THE X TOUT DROITS RÉSERVÉS</div>
     </footer>
+
+    <?php
+    include_once('connexionbdd.php');
+    ?>
 </body>
 </html>

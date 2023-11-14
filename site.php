@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lato:wght@100&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <script src="regex.js" defer></script>
+    <!-- <script src="regex.js" defer></script> -->
     <title>Online CV</title>
 </head>
 <body>
@@ -52,7 +52,6 @@
         </nav>
     </header>
 
-    
     <main>
         <!-- FIRST SECTION 'PRESENTATION'-->
         <section>
@@ -105,7 +104,7 @@
         <section>
             <h2 id="contact__ancre" class="section__form--title">CONTACT ME</h2>
             <div class="section__form">
-                <form action="" method="post" id="form">
+                <form action="connexionbdd.php" method="post" id="form">
                     <div class="form__input">
                         <h3 class="form__title">HERE &#x21E3;</h3>
                         <label for="nom">Last Name :</label>
